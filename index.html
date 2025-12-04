@@ -1,0 +1,155 @@
+<!-- end list -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 全局重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: white;
+        }
+
+        /* 背景容器 */
+        .bg-container {
+            /* 这里替换你的背景图片URL */
+            background-image: url('https://p.inari.site/guest/25-12/04/693101a5dbddb.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            
+            /* 使用 Flexbox 让内容居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 黑色遮罩层，让文字更清晰 */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 0.5 代表 50% 透明度 */
+            z-index: 1;
+        }
+
+        /* 顶部 Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        
+        .logo img {
+            height: 50px; /* Logo 高度，可按需调整 */
+            width: auto;
+        }
+
+        /* 主要内容区域 */
+        .content {
+            z-index: 2; /* 确保内容在遮罩层之上 */
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        /* 大标题样式 */
+        h1 {
+            font-size: 3rem; /* 电脑端默认大小 */
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* 小标题样式 */
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* 描述文本 */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* 按钮样式（可选） */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* 手机端标题变小 */
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .logo {
+                top: 15px;
+                left: 50%; /* 手机端 Logo 居中 */
+                transform: translateX(-50%);
+            }
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container">
+        <div class="overlay"></div>
+
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x50/ffffff/000000?text=My+Logo" alt="Logo">
+        </div>
+
+        <div class="content">
+            <h1>Welcome to IkeruP</h1>
+            <h2>プロデューサーさん、こらからも、アイマス！</h2>
+            <p>学園マス：E58DD3K4</p>
+            <p>ミリオンマス:TBDKGBGJ</p>
+            <p>シャニマス:ZUBKBB8BU</p>
+            <p>シンデレラ：404Not found</p>
+            <p>-連絡先：</p>
+            <p>QQ1：374806766</p>
+            
+            <a href="#" class="btn">其他功能开发中</a>
+        </div>
+    </div>
+
+</body>
+</html>
