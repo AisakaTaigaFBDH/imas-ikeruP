@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/AisakaTaiga/Downloads/t.html -->
+<!-- saved from url=(0047)https://aisakataigafbdh.github.io/imas-ikeruP/# -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,34 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body, html { height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; }
 
-        /* --- 背景容器 --- */
-        .bg-container {
-            background-image: url('https://p.inari.site/guest/25-12/04/693101a5dbddb.png'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+/* --- 背景容器：默认 (横屏) 样式 --- */
+.bg-container {
+    /* [横屏壁纸] 这里替换你的横屏/宽屏背景图片URL */
+    background-image: url('https://p.inari.site/guest/25-12/04/693101a5dbddb.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    /* 保持 Flex 布局，让内容居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* [新增] 竖屏 (Portrait) 适配：加载不同的背景图 */
+/* 只有当屏幕高度大于宽度时（即竖屏状态），才会应用此样式 */
+@media (orientation: portrait) {
+    .bg-container {
+        /* [竖屏壁纸] 这里替换你的竖屏/高屏背景图片URL */
+        background-image: url('https://p.inari.site/guest/25-12/06/6933b8974a87c.png');
+    }
+}
+
 
         .overlay {
             position: absolute;
@@ -168,6 +181,7 @@
             albumArt.style.animationPlayState = 'paused';
         });
     </script>
+
 
 
 
